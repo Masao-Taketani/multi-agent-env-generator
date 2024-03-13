@@ -1,0 +1,12 @@
+python trans_learner_training_gan.py \
+    --data_dir encoded_dataset/carla/ \
+    --max_seq_len 64 \
+    --num_transenclayer 24 \
+    --attn_mask_type 6th \
+    --dataset carla \
+    --action_space 2 \
+    --continuous_action \
+    --seq_weights \
+    --log_dir translearner_results/carla/gan/mask_6th/seq_64_layer_24_bs_336_sw \
+    --num_agents 1 \
+    --batch_size 336
