@@ -3,7 +3,8 @@
 ![generated_boxing](https://github.com/Masao-Taketani/multi-agent-env-generator/assets/37681936/6b92fde8-f061-453b-b5fc-debc3a569e1c)
 ![generated_gtav](https://github.com/Masao-Taketani/multi-agent-env-generator/assets/37681936/d2ce14b8-3897-4db3-8179-1a5c02c84ca0)
 ![generated_carla](https://github.com/Masao-Taketani/multi-agent-env-generator/assets/37681936/9042941c-d4b1-413b-92b0-51bfa0d4b784)
-
+<br>
+[Paper Link](https://github.com/Masao-Taketani/multi-agent-env-generator/blob/main/paper/Master_Thesis.pdf)
 
 > [!NOTE]
 > Please also refer to `scripts` directory as to 1st and 2nd training phases and encoding images after 1st training phase. Hyperparameters we applied for each dataset are also listed there.
