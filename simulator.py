@@ -10,7 +10,6 @@ from PIL import Image
 from models.enc_dec import EncoderDecoder
 from models.transformer import TransitionLearner
 from models.transformer_old import TransitionLearner as TransitionLearnerOld
-from models.transformer_xl import TransformerXL
 
 
 def show_and_return_init_img(init_img_path):
@@ -292,8 +291,6 @@ if __name__ == '__main__':
             raise KeyError(f"You need to specify 'trans_type'.")
         elif args.trans_type == 'vanilla':
             trans_type = 'vanilla'
-        elif args.trans_type == 'xl':
-            trans_type = 'xl'
         else:
             raise NameError(f'trans_type {args.trans_type} does not exist!')
     
@@ -317,18 +314,6 @@ if __name__ == '__main__':
         del trans_saved_file
         batch_size = 1
         translearner.init_queries(device, batch_size)
-    elif trans_type == 'xl':
-        trans_args.same_length = args.same_length
-        if args.mem_len > -1: trans_args.mem_len = args.mem_len
-        translearner = TransformerXL(trans_args.n_layer, trans_args.n_head, trans_args.d_model, 
-                                     trans_args.d_head, trans_args.d_inner, trans_args.dropout, 
-                                     trans_args.dropatt, trans_args.action_space, trans_args.d_embed, 
-                                     trans_args.pre_lnorm, trans_args.max_seq_len, trans_args.ext_len, 
-                                     trans_args.mem_len, trans_args.same_length, 
-                                     trans_args.clamp_len).to(device)
-        translearner.load_state_dict(trans_saved_file['translearner'], strict=True)
-        del trans_saved_file
-        translearner.init_queries_and_mems(device)
 
     encdec.eval()
     translearner.eval()

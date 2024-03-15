@@ -6,8 +6,8 @@
 ![generated_carla](https://github.com/Masao-Taketani/multi-agent-env-generator/assets/37681936/9042941c-d4b1-413b-92b0-51bfa0d4b784)
 <br>
 [Paper Link](https://github.com/Masao-Taketani/multi-agent-env-generator/blob/main/paper/Master_Thesis.pdf)
-
-**Trained Weights will be released soon!**
+<br>
+[Link of trained weights](https://drive.google.com/drive/folders/1FEXgXS-BF_1NyhY_RlrjUqFcUJICIYRy?usp=sharing)
 
 > [!NOTE]
 > Please also refer to `scripts` directory as to 1st and 2nd training phases and encoding images after 1st training phase. Hyperparameters we applied for each dataset are also listed there.
@@ -59,12 +59,12 @@ python trans_learner_training_gan.py --batch_size [batch size] --data_dir [datas
 
 ## Simulator Execution
 `sudo` is required to run `keyboard` module. The followings are command descriptions for all the environments supported to run on this repo.
-- [GTAⅤ]
+- [GTAⅤ]<br>
 Left: a, Right: d<br>
-- [Pong (2 agents)]
+- [Pong (2 agents)]<br>
 1st agent: Fire: w, Left: a, Right: d<br>
 2nd agent: Fire: i, Left: j, Right: l<br>
-- [Boxing]
+- [Boxing]<br>
 1st agent: Fire: e, Left: a, Right: d, Up: w, Down: s<br>
 2nd agent: Fire: u, Left: j, Right: l, Up: i, Down: k<br>
 
