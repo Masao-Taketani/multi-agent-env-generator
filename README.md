@@ -58,7 +58,16 @@ python trans_learner_training_gan.py --batch_size [batch size] --data_dir [datas
 ```
 
 ## Simulator Execution
-`sudo` is required to run `keyboard` module. 
+`sudo` is required to run `keyboard` module. The followings are command descriptions for all the environments supported to run on this repo.
+- [GTAⅤ]
+Left: a, Right: d<br>
+- [Pong (2 agents)]
+1st agent: Fire: w, Left: a, Right: d<br>
+2nd agent: Fire: i, Left: j, Right: l<br>
+- [Boxing]
+1st agent: Fire: e, Left: a, Right: d, Up: w, Down: s<br>
+2nd agent: Fire: u, Left: j, Right: l, Up: i, Down: k<br>
+
 > [!TIP]
 > As for `pong` environment, the transitions of the environment is rather slow. In case you feel the same, use `--fps 60` for more challenging transition speed. 
 
