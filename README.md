@@ -9,6 +9,9 @@
 <br>
 [Link of trained weights](https://drive.google.com/drive/folders/1FEXgXS-BF_1NyhY_RlrjUqFcUJICIYRy?usp=sharing)
 
+> [!IMPORTANT]
+> As for the multi-agent models, the trained weights are created based on agents with random policy. If you want more highly accurate environments in any kinds of situations, include data of agents with various kinds of levels, such as random, beginners, mid levels, and experts.
+
 > [!NOTE]
 > Please also refer to `scripts` directory as to 1st and 2nd training phases and encoding images after 1st training phase. Hyperparameters we applied for each dataset are also listed there.
 
@@ -58,15 +61,26 @@ python trans_learner_training_gan.py --batch_size [batch size] --data_dir [datas
 ```
 
 ## Simulator Execution
-`sudo` is required to run `keyboard` module. The followings are command descriptions for all the environments supported to run on this repo.
+`sudo` is required to run `keyboard` module. Use an image located under `init_imgs` directory for each initial image required to run the simulator.<br>
+The followings are command descriptions for all the environments supported to run on this repo.
 - [GTAⅤ]<br>
 Left: a, Right: d<br>
 - [Pong (2 agents)]<br>
 1st agent: Fire: w, Left: a, Right: d<br>
 2nd agent: Fire: i, Left: j, Right: l<br>
+- [Pong (4 agents)]<br>
+1st agent: Fire: w, Left: a, Right: d<br>
+2nd agent: Fire: t, Left: h, Right: f<br>
+3rd agent: Fire: i, Left: j, Right: l<br>
+4th agent: Fire: s, Left: z, Right: c<br>
 - [Boxing]<br>
 1st agent: Fire: e, Left: a, Right: d, Up: w, Down: s<br>
 2nd agent: Fire: u, Left: j, Right: l, Up: i, Down: k<br>
+
+press `q` or Ctrl + C on the terminal to quit the environment you are playing.
+
+> [!IMPORTANT]
+> As for the multi-agent models, the trained weights are created based on agents with random policy. Thus, the generated results may not be consistent if the inputs for the agents are not random.
 
 > [!TIP]
 > As for `pong` environment, the transitions of the environment is rather slow. In case you feel the same, use `--fps 60` for more challenging transition speed. 
