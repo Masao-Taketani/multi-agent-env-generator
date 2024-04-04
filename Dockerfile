@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip install tqdm
 RUN pip install opencv-python
-RUN pip install pettingzoo
+RUN pip install pettingzoo==1.22
 RUN pip install multi-agent-ale-py
 RUN pip install AutoROM
 RUN AutoROM -y
@@ -30,6 +30,7 @@ RUN pip install scipy
 RUN pip install scikit-image==0.17.2
 RUN pip install ipython==7.19.0
 RUN pip install moviepy
+RUN pip install --upgrade pillow==9.5.0
 
 RUN \
    echo 'alias python="/usr/bin/python3"' >> /root/.bashrc && \
