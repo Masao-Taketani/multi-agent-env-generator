@@ -21,7 +21,7 @@
 ## Build the Environment
 ```
 docker build -t [Docker image name] .
-docker run --rm -it --ipc=host --gpus '"device=[device id(s)]"' -v $(pwd):/work [Docker image name]:latest
+docker run --rm -it '"device=[device id(s)]"' -v $(pwd):/work [Docker image name]:latest
 ```
 
 ## Supported Datasets
