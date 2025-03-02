@@ -19,6 +19,9 @@
 > We used a single GPU having 48GB GPU memory for 2nd training phase. If your machine has smaller GPU memory size, reduce the batch size.
 
 ## Build the Environment
+> [!Tip]
+> Remove #s for the [two lines](Dockerfile#L8) after setting your time zone, so that you can avoid an interruption in the process of building the environment.
+
 ```
 docker build -t [Docker image name] .
 docker run --rm -it '"device=[device id(s)]"' -v $(pwd):/work [Docker image name]:latest

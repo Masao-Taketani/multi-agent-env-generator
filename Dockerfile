@@ -4,8 +4,9 @@ SHELL ["/bin/bash", "-c"]
 # for gnu screen
 ENV SHELL /bin/bash
 
-ENV TZ=Asia/Tokyo
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# Remove #s for the two lines below after setting your time zone, so that you can avoid an interruption in the process of building the environment.
+#ENV TZ={your time zone here}
+#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && apt-get install -y \ 
     vim \
